@@ -1,6 +1,6 @@
 -- Database creation script
-CREATE DATABASE IF NOT EXISTS `fatec_contatos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `fatec_contatos`;
+CREATE DATABASE IF NOT EXISTS `if0_41931839_atv_11` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `if0_41931839_atv_11`;
 
 -- Contatos table structure
 CREATE TABLE IF NOT EXISTS `contatos` (
