@@ -11,10 +11,10 @@ if ($is_localhost) {
     $password = ''; // Padrão local sem senha
 } else {
     // Configuração para o ambiente de produção do InfinityFree
-    // IMPORTANTE: Altere os valores abaixo com os dados reais exibidos no seu painel do InfinityFree (MySQL Databases).
+    // IMPORTANTE: Substitua 'SUA_SENHA_MYSQL_INFINITY' e ajuste o host se necessário (consulte no painel do InfinityFree).
     $host = 'sqlXXX.infinityfree.com';        // Endereço do Servidor MySQL (ex: sql301.infinityfree.com)
-    $dbname = 'if0_XXXXXX_fatec_contatos';    // Nome do banco de dados (ex: if0_38210391_fatec_contatos)
-    $username = 'if0_XXXXXX';                 // Usuário do banco de dados (ex: if0_38210391)
+    $dbname = 'if0_41931839_atv_11';          // Nome do banco de dados real
+    $username = 'if0_41931839';               // Usuário do banco de dados real
     $password = 'SUA_SENHA_MYSQL_INFINITY';   // Senha gerada pelo painel (pode ser encontrada na área do cliente)
 }
 

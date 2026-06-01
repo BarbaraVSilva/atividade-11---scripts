@@ -1,17 +1,16 @@
 -- Script de Criação do Banco de Dados
 -- =========================================================================
 -- IMPORTANTE PARA INFINITYFREE:
--- 1. No painel do InfinityFree, vá em "MySQL Databases" e crie um banco de dados.
---    Ele terá um nome automático no formato: if0_XXXXXX_fatec_contatos
--- 2. No phpMyAdmin do InfinityFree, selecione esse banco de dados criado.
+-- 1. O seu banco de dados no InfinityFree chama-se: if0_41931839_atv_11
+-- 2. No phpMyAdmin do InfinityFree, selecione o banco de dados if0_41931839_atv_11.
 -- 3. Importe este arquivo SQL diretamente nele.
 -- 
 -- As linhas de CREATE DATABASE e USE foram comentadas abaixo para evitar
--- erros de permissão na importação do InfinityFree.
+-- erros de permissão ou de contexto na importação do phpMyAdmin do InfinityFree.
 -- =========================================================================
 
--- CREATE DATABASE IF NOT EXISTS `fatec_contatos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
--- USE `fatec_contatos`;
+-- CREATE DATABASE IF NOT EXISTS `if0_41931839_atv_11` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- USE `if0_41931839_atv_11`;
 
 -- Estrutura da tabela `contatos`
 CREATE TABLE IF NOT EXISTS `contatos` (
