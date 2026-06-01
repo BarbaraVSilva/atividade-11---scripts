@@ -43,8 +43,7 @@ if ($search !== '') {
 }
 
 if (in_array($days, [7, 30, 90])) {
-    $where_clauses[] = "criado_em >= DATE_SUB(NOW(), INTERVAL :days DAY)";
-    $params['days'] = $days;
+    $where_clauses[] = "criado_em >= DATE_SUB(NOW(), INTERVAL " . intval($days) . " DAY)";
 }
 
 $where_sql = '';
