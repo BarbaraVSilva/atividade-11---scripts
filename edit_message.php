@@ -32,7 +32,7 @@ try {
 $error_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $mensagem = htmlspecialchars(trim($_POST['mensagem'] ?? ''), ENT_QUOTES, 'UTF-8');
+    $mensagem = trim($_POST['mensagem'] ?? '');
 
     if (empty($mensagem)) {
         $error_message = 'A mensagem do contato não pode estar vazia.';

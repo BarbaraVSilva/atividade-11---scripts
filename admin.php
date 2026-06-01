@@ -37,8 +37,9 @@ $where_clauses = [];
 $params = [];
 
 if ($search !== '') {
-    $where_clauses[] = "(nome LIKE :search OR email LIKE :search)";
-    $params['search'] = "%$search%";
+    $where_clauses[] = "(nome LIKE :search_nome OR email LIKE :search_email)";
+    $params['search_nome'] = "%$search%";
+    $params['search_email'] = "%$search%";
 }
 
 if (in_array($days, [7, 30, 90])) {

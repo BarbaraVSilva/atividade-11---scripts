@@ -11,11 +11,11 @@ $telefone = '';
 $mensagem = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitize user inputs
-    $nome = htmlspecialchars(trim($_POST['nome'] ?? ''), ENT_QUOTES, 'UTF-8');
+    // Obter e limpar dados de entrada (o PDO se encarrega de evitar SQL injection de forma segura)
+    $nome = trim($_POST['nome'] ?? '');
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $telefone = htmlspecialchars(trim($_POST['telefone'] ?? ''), ENT_QUOTES, 'UTF-8');
-    $mensagem = htmlspecialchars(trim($_POST['mensagem'] ?? ''), ENT_QUOTES, 'UTF-8');
+    $telefone = trim($_POST['telefone'] ?? '');
+    $mensagem = trim($_POST['mensagem'] ?? '');
 
     // Server-side validation
     if (empty($nome) || empty($email) || empty($telefone) || empty($mensagem)) {
