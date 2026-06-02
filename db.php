@@ -1,21 +1,19 @@
 <?php
 // Detecta se a aplicação está rodando em ambiente local (localhost ou 127.0.0.1)
-$is_localhost = in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1']) 
-             || (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] === '127.0.0.1');
+$is_localhost = in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1', '::1']);
 
 if ($is_localhost) {
     // Configuração para ambiente de desenvolvimento local (ex: XAMPP, WAMP, Laragon)
-    $host = 'localhost';
+    $host = '127.0.0.1'; // Usar 127.0.0.1 força conexão TCP e evita erro de socket
     $dbname = 'fatec_contatos';
     $username = 'root';
     $password = ''; // Padrão local sem senha
 } else {
     // Configuração para o ambiente de produção do InfinityFree
-    // IMPORTANTE: Substitua 'SUA_SENHA_MYSQL_INFINITY' e ajuste o host se necessário (consulte no painel do InfinityFree).
-    $host = 'sqlXXX.infinityfree.com';        // Endereço do Servidor MySQL (ex: sql301.infinityfree.com)
+    $host = 'sql201.infinityfree.com';        // Endereço do Servidor MySQL do seu painel
     $dbname = 'if0_41931839_atv_11';          // Nome do banco de dados real
     $username = 'if0_41931839';               // Usuário do banco de dados real
-    $password = 'SUA_SENHA_MYSQL_INFINITY';   // Senha gerada pelo painel (pode ser encontrada na área do cliente)
+    $password = 'YVyulvX9myI7';               // Senha do MySQL exibida no painel (corrigido: letra l minúscula)
 }
 
 try {
