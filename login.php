@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header>
         <div class="header-container">
             <a href="index.php" class="logo-link">
-                <img src="https://www.cps.sp.gov.br/wp-content/uploads/sites/1/2017/06/fatec.png" 
+                <img src="logo-fatec.png" 
                      alt="Fatec Logo" 
                      class="logo-img" 
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
